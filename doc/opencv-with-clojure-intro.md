@@ -411,7 +411,7 @@ user=> (javadoc Rect)
 ```
 
 
-## Mimic the OpenCV Java Tutorial Sample in the REPL¶
+## Mimic the OpenCV Java Tutorial Sample in the REPL
 
 Let’s now try to port to Clojure the opencv java tutorial
 [sample](http://docs.opencv.org/2.4.4-beta/doc/tutorials/introduction/desktop_java/java_dev_intro.html).
@@ -639,7 +639,7 @@ Copyright © 2013 Giacomo (Mimmo) Cosenza aka Magomimmo
 
 Distributed under the BSD 3-clause License, the same of OpenCV.
 
-Markdownified by Louis Pilfold <louis@lpil.uk>
+Markdownified by Louis Pilfold, aka lpil
 
 ## Help and Feedback
 
