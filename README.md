@@ -1,26 +1,6 @@
 # Decoder
 
-FIXME: description
-
-## Installation
-
-1. Install Java
-2. Install Leiningen
-3. Install OpenCV
-
-## Usage
-
-FIXME: explanation
-
-    $ java -jar decoder-0.1.0-standalone.jar [args]
-
-## Options
-
-FIXME: listing of options this app accepts.
-
-## Examples
-
-FIXME
+I hate all video decoding libraries.
 
 ## License
 
