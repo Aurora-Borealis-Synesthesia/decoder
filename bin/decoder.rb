@@ -11,9 +11,9 @@ end
 video_file = ARGV.first
 
 begin
-  CvCapture.open video_file
+  video_stream = CvCapture.open video_file
 rescue
   abort "Can't find or read '#{video_file}'!"
 end
 
-puts 'Hello, mum!'
+puts "There are #{video_stream.frame_count} frames in '#{video_file}'"
