@@ -3,15 +3,10 @@
 require 'opencv'
 include OpenCV
 
-if ARGV.size == 0
-  puts "Usage: #{__FILE__} path/to/video"
-  exit
-end
-
-video_file = ARGV.first
+abort "Usage: #{__FILE__} path/to/video" if ARGV.empty?
 
 begin
-  video_stream = CvCapture.open video_file
+  video_stream = CvCapture.open ARGV.first
 rescue
   abort "Can't find or read '#{video_file}'!"
 end
