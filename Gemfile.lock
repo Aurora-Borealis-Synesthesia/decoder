@@ -20,6 +20,7 @@ GEM
     rspec-mocks (3.0.2)
       rspec-support (~> 3.0.0)
     rspec-support (3.0.2)
+    ruby-opencv (0.0.13)
     slop (3.6.0)
 
 PLATFORMS
@@ -28,3 +29,4 @@ PLATFORMS
 DEPENDENCIES
   pry
   rspec
+  ruby-opencv (= 0.0.13)
