@@ -7,9 +7,9 @@ require 'opencv'
 # Placeholder for now- uses random indexing.
 def pluck_pixels(frame)
   frame_size = frame.size
-  pixels_to_pick = 5
+  num_plucks = 5
 
-  random_indexes = Array.new(pixels_to_pick) do
+  random_indexes = Array.new(num_plucks) do
     Random.rand(frame_size.height * frame_size.width)
   end
 
