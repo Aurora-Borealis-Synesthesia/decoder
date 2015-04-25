@@ -35,6 +35,10 @@ gem install ruby-opencv -v 0.0.13 -- --with-opencv-dir=/usr/lib/x86_64-linux-gnu
 If this is wrong, try looking up one of the packages with `dpkg -L packagename`
 
 
+## Notes
+
+OpenCV pixels are `blue, red, green, something` ??
+
 ## License
 
     Copyright © 2015 Louis Pilfold. All Rights Reserved.

@@ -1,11 +1,15 @@
 source 'https://rubygems.org'
 
-puts <<DEPENDANCY_WARNING if $PROGRAM_NAME.match(/bundle\z/)
+running_bundle_install = $PROGRAM_NAME.match(/bundle\z/) &&
+                         (ARGV.empty? || ARGV.include?('install'))
+
+dependancy_warning = "
 I see you're installing the dependancies. Don't forget that you also have to
 install the `ruby-opencv` gem first, as well as the OpenCV library itself. See
 the 'Installation' section of the README for more information.
+"
 
-DEPENDANCY_WARNING
+puts dependancy_warning if running_bundle_install
 
 group :development do
   gem 'pry'
