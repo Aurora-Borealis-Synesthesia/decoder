@@ -5,10 +5,14 @@
 require 'opencv'
 require 'json'
 
+require_relative 'random_sampler'
+require_relative 'grid_sampler'
+
 class Video
-  def initialize(path, sampler = RandomSampler)
-    @stream = OpenCV::CvCapture.open path
-    @sampler = sampler
+  def initialize(path, sampler = GridSampler, sampler_args = [10, 10])
+    @stream       = OpenCV::CvCapture.open path
+    @sampler      = sampler
+    @sampler_args = sampler_args
   end
 
   def samples
@@ -30,27 +34,9 @@ class Video
     frame = @stream.query
     while frame
       puts progress_indicator
-      samples_arr << @sampler.new(frame, 10).sample
+      samples_arr << @sampler.new(frame, *@sampler_args).sample
       frame = @stream.query
     end
     samples_arr
-  end
-end
-
-
-class RandomSampler
-  attr_reader :num_samples
-
-  def initialize(frame, num_samples)
-    @frame = frame
-    @num_samples = num_samples
-  end
-
-  def sample
-    frame_size = @frame.size
-    random_indexes = Array.new(num_samples) do
-      Random.rand(frame_size.height * frame_size.width)
-    end
-    random_indexes.map { |i| @frame[i].to_a }
   end
 end
