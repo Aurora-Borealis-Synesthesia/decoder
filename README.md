@@ -2,6 +2,9 @@
 
 I hate all video decoding libraries.
 
+There are no tests. I feel OK about this as generally these scripts are only
+going to be run once. By me.
+
 ## Installation
 
 You'll need to install the OpenCV library. You COULD install it from source,
