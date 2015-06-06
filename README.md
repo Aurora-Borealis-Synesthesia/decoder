@@ -19,21 +19,21 @@ Lastly, the `ruby-opencv` gem. This gem needs to know the directory of the
 OpenCV installation, so we can't install it nicely with bundler. Here's the
 command you'll need to run
 
-~~~
+```
 gem install ruby-opencv -v 0.0.13 -- --with-opencv-dir=/path/to/opencvdir
-~~~
+```
 
 So on OSX with brew:
 
-~~~
+```
 gem install ruby-opencv -v 0.0.13 -- --with-opencv-dir=`brew --prefix opencv`
-~~~
+```
 
 Or on 64bit Debian Jessie:
 
-~~~
+```
 gem install ruby-opencv -v 0.0.13 -- --with-opencv-dir=/usr/lib/x86_64-linux-gnu/
-~~~
+```
 
 If this is wrong, try looking up one of the packages with `dpkg -L packagename`
 
